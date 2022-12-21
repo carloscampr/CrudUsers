@@ -21,10 +21,6 @@ const FormUsers = ({createUser, userUpdate, updateUser, isShowForm, handleChange
         }
         reset(defaultValues)
     }
-    const handleClickOutsideModal = (e)=> {
-        e.stopPropagation()
-        handleChangeShowModal()
-    }
 
     const titleForm = userUpdate ? "Edit user" : "New user"
     const textButton = userUpdate ? "Edit user" : "Add new user"
@@ -35,7 +31,7 @@ const FormUsers = ({createUser, userUpdate, updateUser, isShowForm, handleChange
         }
     }, [userUpdate])
     return(
-        <div onClick={handleClickOutsideModal} className={`container-form ${isShowForm ? "" : "disable-form"}`}>
+        <div className={`container-form ${isShowForm ? "disable-form" : ""}`}>
             <form className="form" onSubmit={handleSubmit(submitForm)}>
                 <i onClick={handleChangeShowModal} className='form_x bx bx-x'></i>
                 <h2 className="form_title">{titleForm}</h2>

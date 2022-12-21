@@ -43,9 +43,9 @@ function App() {
      axios.patch(url,data)
       .then(res => {
         console.log(res.data)
-        getAllUsers();
-        setUserUpdate();
-        handleChangeShowModal();
+        getAllUsers()
+        setUserUpdate()
+        handleChangeShowModal()
       })
       .catch(err => console.log(err))
   }
