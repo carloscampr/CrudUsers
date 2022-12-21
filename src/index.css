@@ -106,7 +106,7 @@ ul li div{
     justify-content: center;
     align-items: center;
 }
-.disable-form{
+.container-form.disable-form{
     display: none;
 }
 .form{

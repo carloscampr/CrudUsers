@@ -28,8 +28,9 @@ const FormUsers = ({createUser, userUpdate, updateUser, isShowForm, handleChange
 
     const titleForm = userUpdate ? "Edit user" : "New user"
     const textButton = userUpdate ? "Edit user" : "Add new user"
+
     useEffect (() =>{
-        if(!userUpdate){
+        if(userUpdate){
             reset(userUpdate)
         }
     }, [userUpdate])
